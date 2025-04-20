@@ -1,0 +1,157 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(180deg, #28074a 0%, #491088 100%);
+    color: #ffffff;
+    padding: 20px;
+  }
+  
+  /* Header */
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(255, 25, 219, 0.3);
+  }
+  
+  /* Section Layout */
+  .control-section {
+    background: linear-gradient(135deg, #491088, #6c1dd0);
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .control-section h2 {
+    font-size: 1.4rem;
+    color: #ff7f1a;
+    margin-bottom: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+  }
+  
+  /* Toggle Switch */
+  .switch-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 32px;
+  }
+  
+  .toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #bd4de5;
+    border-radius: 32px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    content: "";
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #ff19db;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(28px);
+  }
+  
+  /* Button Group */
+  .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .button-group button {
+    background: #bd4de5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+  
+  .button-group button:hover {
+    background: #ff19db;
+  }
+
+  .button-group button:active {
+    box-shadow: 0 0 10px 10px rgba(255, 25, 219, 0.7); /* ✨ Soft pink glow */
+    transform: scale(0.97); /* Optional: gives click feedback */
+  }
+  
+  button i {
+    margin-right: 6px;
+  }
+  
+  /* Display Text */
+  #tempDisplay, #lightStatus {
+    margin-top: 10px;
+    font-size: 1.2rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .button-group {
+      flex-direction: column;
+    }
+  
+    .button-group button {
+      width: 100%;
+    }
+  }
+  #tempDisplay {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #ff7f1a; /* matches your accent color */
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  }
